@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    /* 🔹 Project Structure */
+    "rootDir": "src",
+    "outDir": "dist",
+
+    /* 🔹 Module & Target (Modern Node) */
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+
+    /* 🔹 Path Aliases (clean imports) */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+
+    /* 🔹 Interoperability */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* 🔹 Strict Type Safety (IMPORTANT) */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* 🔹 Code Quality */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* 🔹 Output Control */
+    "sourceMap": true,
+    "removeComments": true,
+
+    /* 🔹 Module Behavior */
+    "resolveJsonModule": true,
+
+    /* 🔹 Performance */
+    "incremental": true,
+
+    /* 🔹 Types */
+    "types": ["node"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
