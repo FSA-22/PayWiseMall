@@ -1,36 +1,217 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PayWise Mall
 
-## Getting Started
+PayWise Mall is a full-stack SaaS commerce platform designed to help businesses manage their operations efficiently. It provides tools for inventory management, order processing, analytics, and user onboarding within a scalable and secure system.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+### 🔐 Authentication & Security
+
+- Secure authentication with HttpOnly cookies
+- Google OAuth integration (via backend token exchange)
+- OTP-based email verification
+- Protected routes and middleware enforcement
+
+### 🧑‍💼 Onboarding System
+
+- Multi-step onboarding flow:
+  - Account creation
+  - Profile setup
+  - Workspace creation
+  - Goal selection
+
+- Step persistence and validation
+
+### 📦 Inventory Management
+
+- Add, update, delete inventory items
+- Search and pagination support
+- Inventory statistics and insights
+
+### 🛒 Order Management
+
+- Create and manage orders
+- Track sales and transactions
+- Customer data integration
+
+### 📊 Dashboard & Analytics
+
+- Key metrics overview (users, sales, etc.)
+- Charts for insights (Recharts)
+- Latest users and activity tracking
+
+### 📤 Reports & Export
+
+- Export data as:
+  - CSV
+  - XLSX
+  - PDF
+
+- Email report submission support
+
+---
+
+## 🏗️ Tech Stack
+
+### Frontend
+
+- Next.js (App Router)
+- TypeScript
+- TailwindCSS
+- shadcn/ui
+- React Hook Form + Zod
+- Recharts
+
+### Backend
+
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB + Mongoose
+
+### Architecture
+
+- API routes via Next.js (`app/api/...`)
+- Service layer abstraction (`lib/services`)
+- Backend handles core business logic
+- Secure cookie-based authentication
+
+---
+
+## 📁 Project Structure
+
+```
+/frontend
+  /app
+    /api
+    /dashboard
+    /onboarding
+  /components
+  /hooks
+  /lib
+    /services
+
+/backend
+  /src
+    /controllers
+    /models
+    /routes
+    /middlewares
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/fsa-22/PayWiseMall.git
+cd PayWiseMall
+```
+
+### 2. Install Dependencies
+
+#### Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+#### Backend
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+### 3. Environment Variables
+
+Create `.env` files in both frontend and backend:
+
+#### Backend `.env`
+
+```
+PORT=5000
+DATABASE_URI=your_supabase
+JWT_SECRET=your_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
+
+#### Frontend `.env`
+
+```
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+---
+
+### 4. Run the Application
+
+#### Backend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Frontend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔄 API Flow
 
-To learn more about Next.js, take a look at the following resources:
+- Frontend interacts with internal API routes (`app/api/...`)
+- API routes proxy requests to backend services
+- Backend handles:
+  - Authentication
+  - Business logic
+  - Database operations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Tokens stored securely in HttpOnly cookies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧠 Key Concepts Implemented
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Cookie-based authentication (no localStorage tokens)
+- Layered architecture (API → Service → Backend)
+- Form validation with Zod
+- Scalable onboarding flow
+- Data export and reporting system
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📌 Future Improvements
+
+- Payment gateway integration
+- Role-based access control (RBAC)
+- Multi-tenant workspace support
+- Real-time notifications
+- Mobile optimization
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome. Feel free to fork the repo and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👤 Author
+
+Built by Simeon Fowotade
