@@ -1,29 +1,221 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =========================
+   THEME (FONTS + SCALE)
+========================= */
+
+@theme {
+  --font-sans:
+    var(--font-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Inter, Arial, sans-serif;
+
+  --font-mono: var(--font-mono), monospace;
+
+  /* Typography scale */
+  --text-display-2xl: 4.5em;
+  --text-display-xl: 3.75em;
+  --text-display-lg: 3em;
+  --text-display-md: 2.25em;
+  --text-display-sm: 1.875em;
+  --text-display-xs: 1.5em;
+
+  --text-para-xl: 1.25em;
+  --text-para-lg: 1.125em;
+  --text-para-md: 1em;
+  --text-para-sm: 0.875em;
+  --text-para-xs: 0.75em;
+
+  --color-gray-100: var(--gray-100);
+  --color-gray-300: var(--gray-300);
+  --color-gray-500: var(--gray-500);
+  --color-gray-700: var(--gray-700);
+  --color-gray-900: var(--gray-900);
+
+  --color-primary-1: var(--primary-1);
+  --color-primary-2: var(--primary-2);
+  --color-primary-3: var(--primary-3);
+  --color-primary-4: var(--primary-4);
+  --color-primary-5: var(--primary-5);
+
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
 }
+
+/* =========================
+   COLOR TOKENS
+========================= */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gray-100: var(--gray-100);
+  --color-gray-300: var(--gray-300);
+  --color-gray-500: var(--gray-500);
+  --color-gray-700: var(--gray-700);
+  --color-gray-900: var(--gray-900);
+
+  --color-primary-1: var(--primary-1);
+  --color-primary-2: var(--primary-2);
+  --color-primary-3: var(--primary-3);
+  --color-primary-4: var(--primary-4);
+  --color-primary-5: var(--primary-5);
+
+  --color-secondary-1: var(--secondary-1);
+  --color-secondary-2: var(--secondary-2);
+
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
+
+  --color-black: var(--black);
+  --color-white: var(--white);
+
+  --color-tertiary-1: var(--tertiary-1);
+
+  --color-error-1: var(--error-1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =========================
+   LIGHT MODE
+========================= */
+
+:root {
+  --gray-100: #f3f4f6;
+  --gray-300: #d0d5dd;
+  --gray-500: #6a7181;
+  --gray-700: #3a414e;
+  --gray-900: #181b20;
+
+  --black: #000000;
+  --white: #ffffff;
+
+  --primary-text: #171717;
+
+  --primary-1: #1c9c97;
+  --primary-2: #c3ebea;
+  --primary-3: #dbfbfa;
+  --primary-4: #b8f8f5;
+  --primary-5: #157571;
+
+  --accent-300: #fd9ab6;
+  --accent-400: #de2a5d;
+  --accent-500: #b4204c;
+  --accent-600: #991b42;
+  --accent-700: #7f1737;
+
+  --secondary-1: #ffa500;
+  --secondary-2: #ffb42a;
+
+  --tertiary-1: #d03e94;
+
+  --error-1: #ff3b30;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark {
+  --gray-100: #151a21;
+  --gray-300: #26303c;
+  --gray-500: #6a7181;
+  --gray-700: #c2c8d2;
+  --gray-900: #f6f7fa;
+
+  --primary-1: #ff7aa0;
+  --primary-2: #f24778;
+  --primary-3: #c51d56;
+  --primary-4: #b4204c;
+  --primary-5: #7f1737;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+
+@layer base {
+  body {
+    @apply text-gray-900 antialiased mx-auto max-w-screen-2xl;
+    font-family: var(--font-sans);
+  }
+
+  :is(button, a, input, textarea, select) {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2;
+    outline-color: var(--color-primary-500);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
 
-:root {
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+/* =========================
+   UTILITIES
+========================= */
+
+@utility flex-center {
+  @apply flex items-center justify-center;
 }
 
-body {
-  font-family: var(--font-sans);
+@utility header {
+  @apply fixed top-0 left-0 right-0 z-50 h-18 flex items-center justify-around backdrop-blur-md;
+}
+
+@utility hero-title-style {
+  @apply text-6xl font-medium tracking-tight;
+}
+
+@utility title-text {
+  @apply font-medium tracking-tight max-sm:text-3xl sm:text-5xl;
+}
+
+@utility sub-title-text {
+  @apply max-sm:text-xl sm:text-2xl;
+}
+
+@utility desc-text {
+  @apply max-sm:text-sm sm:text-lg;
+}
+
+/* =========================
+   MISC
+========================= */
+
+::selection {
+  background: rgba(253, 154, 182, 0.3);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   PROSE FIX
+========================= */
+
+@layer base {
+  .prose {
+    --tw-prose-body: var(--color-gray-700);
+    --tw-prose-headings: var(--color-gray-900);
+    --tw-prose-links: var(--color-primary-600);
+    --tw-prose-bold: var(--color-gray-900);
+    --tw-prose-hr: var(--color-gray-300);
+    --tw-prose-code: var(--color-primary-700);
+
+    @apply dark:[--tw-prose-body:var(--color-gray-300)]
+           dark:[--tw-prose-headings:var(--color-gray-100)]
+           dark:[--tw-prose-links:var(--color-primary-400)]
+           dark:[--tw-prose-bold:var(--color-gray-100)]
+           dark:[--tw-prose-hr:var(--color-gray-700)]
+           dark:[--tw-prose-code:var(--color-primary-300)];
+  }
 }
