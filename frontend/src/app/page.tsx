@@ -4,7 +4,7 @@ import { ButtonLoader } from '@/components/shared/load-state/ButtonLoader';
 import { Skeleton } from '@/components/shared/load-state/Skeleton';
 import { TopLoader } from '@/components/shared/load-state/TopLoader';
 
-const loading = false;
+const loading = true;
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         <Skeleton className="h-4 w-5/6" />
       </div>
 
-      <button className="flex items-center gap-2 bg-primary-5 text-white px-4 py-2 rounded-lg">
+      <button className="btn-primary flex-center ">
         {loading && <ButtonLoader />}
         {loading ? 'Processing...' : 'Continue'}
       </button>
