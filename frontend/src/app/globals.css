@@ -174,7 +174,23 @@
 
   --tertiary-1: #d03e94;
 
-  --error-1: #ff3b30;
+  --color-error: #ff3b30;
+  /* --color-error: #ef4444; */
+  --color-error-foreground: #ffffff;
+  --color-error-muted: #fef2f2;
+  --color-error-border: #fecaca;
+  --color-error-hover: #dc2626;
+
+  --color-success: #22c55e;
+  --color-success-foreground: #052e16;
+  --color-success-muted: #f0fdf4;
+  --color-success-border: #bbf7d0;
+
+  /* WARNING */
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #78350f;
+  --color-warning-muted: #fffbeb;
+  --color-warning-border: #fde68a;
 
   --background: oklch(1 0 0);
 
@@ -407,6 +423,154 @@
 
 @utility btn-icon {
   @apply btn p-2 aspect-square;
+}
+
+@utility input-error {
+  @apply border rounded-xl transition-all duration-200;
+
+  border-color: var(--color-error);
+  background-color: var(--color-error-muted);
+
+  @apply focus:ring-2;
+}
+
+@utility input-error-focus {
+  &:focus {
+    box-shadow: 0 0 0 2px var(--color-error-border);
+  }
+}
+
+@utility error-text {
+  @apply text-sm mt-1 font-medium;
+
+  color: var(--color-error);
+}
+
+@utility alert-error {
+  @apply flex items-start gap-3 rounded-2xl p-4 border;
+
+  background-color: var(--color-error-muted);
+  border-color: var(--color-error-border);
+  color: var(--color-error);
+}
+
+@utility alert-error-icon {
+  @apply shrink-0 mt-0.5;
+}
+
+@utility btn-error {
+  @apply btn;
+
+  background-color: var(--color-error);
+  color: var(--color-error-foreground);
+
+  @apply shadow-sm hover:shadow-md active:scale-[0.98];
+
+  &:hover {
+    background-color: var(--color-error-hover);
+  }
+
+  &:focus {
+    @apply ring-(--color-error);
+  }
+}
+
+@utility shake-error {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@utility alert {
+  @apply flex items-start gap-3 rounded-2xl p-4 border;
+}
+
+/* Variants */
+@utility alert-success {
+  @apply alert;
+  background-color: var(--color-success-muted);
+  border-color: var(--color-success-border);
+  color: var(--color-success);
+}
+
+@utility alert-warning {
+  @apply alert;
+  background-color: var(--color-warning-muted);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning);
+}
+
+@utility alert-error {
+  @apply alert;
+  background-color: var(--color-error-muted);
+  border-color: var(--color-error-border);
+  color: var(--color-error);
+}
+
+@utility toast {
+  @apply rounded-xl border px-4 py-3 shadow-md text-sm;
+}
+
+/* Variants */
+@utility toast-success {
+  @apply toast;
+  background-color: var(--color-success-muted);
+  border-color: var(--color-success-border);
+  color: var(--color-success);
+}
+
+@utility toast-error {
+  @apply toast;
+  background-color: var(--color-error-muted);
+  border-color: var(--color-error-border);
+  color: var(--color-error);
+}
+
+@utility toast-warning {
+  @apply toast;
+  background-color: var(--color-warning-muted);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning);
+}
+
+@utility toast {
+  @apply rounded-2xl px-4 py-3 border shadow-md text-sm;
+  backdrop-filter: blur(8px);
+}
+
+/* SUCCESS */
+@utility toast-success {
+  @apply toast;
+  background-color: var(--color-success-muted);
+  border-color: var(--color-success-border);
+  color: var(--color-success);
+}
+
+/* ERROR */
+@utility toast-error {
+  @apply toast;
+  background-color: var(--color-error-muted);
+  border-color: var(--color-error-border);
+  color: var(--color-error);
+}
+
+/* WARNING */
+@utility toast-warning {
+  @apply toast;
+  background-color: var(--color-warning-muted);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning);
 }
 
 ::selection {
