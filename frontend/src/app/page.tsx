@@ -37,7 +37,7 @@ const Home = () => {
       </div>
 
       <div className="space-y-1">
-        <input className="input-base input-error" />
+        <input className="input-base input-error-focus" />
         <p className="error-text">Card number is incomplete</p>
       </div>
 
