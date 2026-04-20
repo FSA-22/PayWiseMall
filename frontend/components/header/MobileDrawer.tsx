@@ -6,6 +6,7 @@ import { NavLinksGroup } from './nav/NavLinksGroup';
 import { InlineCTA } from '../InlineCTA';
 import { Button } from '../ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type MobileDrawerProps = {
   open: boolean;
@@ -28,15 +29,18 @@ export const MobileDrawer = ({ open, onClose }: MobileDrawerProps) => {
         className={`fixed top-0 left-0 h-full w-[80%] max-w-sm bg-white z-50 transform transition-transform duration-300
         ${open ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        <div className="flex items-center justify-between p-4 border-b">
-          <Image
-            src={'/icons/logo.svg'}
-            alt="App Logo"
-            height={80}
-            width={80}
-            className="max-sm:w-16 max-sm:h-16"
-            loading="eager"
-          />
+        <div className="flex items-center justify-between p-4 border-b cursor-pointer">
+          <Link href="/">
+            <Image
+              src={'/icons/logo.svg'}
+              alt="App Logo"
+              height={80}
+              width={80}
+              className="max-sm:w-16 max-sm:h-16"
+              loading="eager"
+            />
+          </Link>
+
           <button className="" onClick={onClose}>
             <X />
           </button>
@@ -59,9 +63,11 @@ export const MobileDrawer = ({ open, onClose }: MobileDrawerProps) => {
             imageUrl="/icons/arrow-up-right.svg"
           />
           {/* Auth */}
-          <Button className="btn-primary rounded-xl py-3">
-            Create Account
-          </Button>
+          <Link href="/auths">
+            <Button className="btn-primary rounded-xl py-3 cursor-pointer">
+              Create Account
+            </Button>
+          </Link>
         </div>
       </div>
     </>

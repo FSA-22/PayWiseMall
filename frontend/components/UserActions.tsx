@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { SearchInput } from './shared/SearchAnything';
+import Link from 'next/link';
 
 type MenuProps = {
   onMenuClick?: () => void;
@@ -55,14 +56,16 @@ export const UserActions = ({ onMenuClick }: MenuProps) => {
       />
 
       {/* Mobile menu trigger */}
-      <button onClick={onMenuClick} className="sm:hidden">
+      <button onClick={onMenuClick} className="sm:hidden cursor-pointer">
         <Image src="/icons/menu-05.svg" height={16} width={16} alt="menu" />
       </button>
 
       {/* Desktop CTA */}
-      <Button className="hidden sm:flex btn-primary rounded-2xl py-5 w-50">
-        Create Account
-      </Button>
+      <Link href="/auths">
+        <Button className="hidden sm:flex btn-primary rounded-2xl py-5 w-50">
+          Create Account
+        </Button>
+      </Link>
     </div>
   );
 };
