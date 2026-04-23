@@ -1,8 +1,10 @@
+import { HomeHero } from '@/components/sections/HomeHero';
+
 const Home = () => {
   return (
-    <section className="text-2xl text-primary-1 font-bold flex-center w-full h-screen">
-      Home page
-    </section>
+    <main className="w-full">
+      <HomeHero />
+    </main>
   );
 };
 

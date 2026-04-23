@@ -365,6 +365,55 @@
   @apply max-sm:text-sm sm:text-lg;
 }
 
+@utility header-style {
+  @apply w-full fixed top-0 left-0 z-50
+        bg-white backdrop-blur-md
+        transition-all duration-300;
+}
+
+@utility hero-rapper {
+  @apply relative w-full py-16 md:py-24 lg:py-6 bg-primary-5 min-h-screen overflow-hidden mt-16;
+}
+
+@utility hero-1 {
+  @apply flex flex-col space-y-8 py-12 px-4 
+                   md:px-8 md:gap-10
+                   lg:flex-row lg:items-center lg:justify-between lg:gap-10
+                   xl:ml-52 xl:h-[84vh];
+}
+
+@utility hero-1 {
+  @apply flex flex-col space-y-8 py-12 px-4 
+                   md:px-8 md:gap-10
+                   lg:flex-row lg:items-center lg:justify-between lg:gap-10
+                   xl:ml-52 xl:h-[84vh];
+}
+
+@utility home-hero-content-rapper {
+  @apply space-y-4 text-center lg:text-left max-w-xl mx-auto lg:mx-0;
+}
+
+@utility home-hero-1-image-rapper {
+  @apply relative w-full flex justify-center 
+                     md:h-100 
+                     lg:w-1/2
+                     xl:absolute xl:right-0 xl:-top-40 xl:h-full xl:w-lg;
+}
+
+@utility hero-2 {
+  @apply relative w-full flex flex-col space-y-8 bg-primary-2 py-12 px-4 
+                   md:px-8 md:gap-10
+                   lg:flex-row lg:items-center lg:justify-end lg:gap-10
+                   xl:h-[68vh];
+}
+
+@utility home-hero-2-image-rapper {
+  @apply relative w-full flex justify-center
+                     md:h-100 
+                     lg:w-1/2
+                     xl:absolute xl:left-16 xl:-top-8 xl:h-full xl:w-lg;
+}
+
 /* =========================
    BUTTON BASE
 ========================= */
