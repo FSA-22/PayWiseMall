@@ -20,7 +20,7 @@ export const TopNavbar = () => {
             alt="App Logo"
             height={80}
             width={80}
-            className="max-sm:w-16 max-sm:h-16"
+            className="h-auto w-auto max-sm:w-16 max-sm:h-16"
             loading="eager"
           />
         </Link>

@@ -35,6 +35,7 @@ export const HomeHero = () => {
               width={14}
               alt="Hero Button"
               src={'/icons/badge-basket-white.svg'}
+              className="w-auto h-auto"
             />
           </Button>
         </div>
@@ -79,6 +80,7 @@ export const HomeHero = () => {
               width={14}
               alt="Hero Button"
               src={'/icons/wallet.svg'}
+              className="w-auto h-auto"
             />
           </Button>
         </div>

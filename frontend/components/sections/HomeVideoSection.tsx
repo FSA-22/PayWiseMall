@@ -28,6 +28,9 @@ export const HomeVideoSection = () => {
                 className="w-full h-full object-cover"
                 controls
                 preload="metadata"
+                autoPlay
+                loop
+                muted
                 poster="https://cdn.pixabay.com/photo/2016/11/29/09/32/business-1868728_960_720.jpg"
                 aria-describedby="video-description"
               >

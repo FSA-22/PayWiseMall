@@ -20,7 +20,13 @@ export const UserActions = ({ onMenuClick }: MenuProps) => {
         onClick={() => setShowSearch((prev) => !prev)}
         className="sm:hidden bg-gray-200 hover:cursor-pointer"
       >
-        <Image src="/icons/searching.svg" height={16} width={16} alt="search" />
+        <Image
+          src="/icons/searching.svg"
+          height={16}
+          width={16}
+          alt="search"
+          className="w-auto h-auto hover:cursor-pointer"
+        />
       </button>
 
       {/* Search Input (Mobile) */}
@@ -38,26 +44,32 @@ export const UserActions = ({ onMenuClick }: MenuProps) => {
         height={12}
         width={12}
         alt="cart"
-        className="hover:cursor-pointer"
+        className="w-auto h-auto hover:cursor-pointer"
       />
       <Image
         src="/icons/badge-user.svg"
         height={16}
         width={16}
         alt="user"
-        className="hover:cursor-pointer"
+        className="w-auto h-auto hover:cursor-pointer"
       />
       <Image
         src="/icons/help-circle.svg"
         height={16}
         width={16}
         alt="help"
-        className="hover:cursor-pointer"
+        className="w-auto h-auto hover:cursor-pointer"
       />
 
       {/* Mobile menu trigger */}
       <button onClick={onMenuClick} className="sm:hidden cursor-pointer">
-        <Image src="/icons/menu-05.svg" height={16} width={16} alt="menu" />
+        <Image
+          src="/icons/menu-05.svg"
+          height={16}
+          width={16}
+          alt="menu"
+          className="w-auto h-auto"
+        />
       </button>
 
       {/* Desktop CTA */}

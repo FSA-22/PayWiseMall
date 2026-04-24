@@ -16,7 +16,7 @@ const Footer = () => {
               alt="App Logo"
               height={100}
               width={100}
-              className="max-sm:w-16 max-sm:h-16"
+              className="h-auto w-auto max-sm:w-16 max-sm:h-16"
               loading="eager"
             />
           </Link>
@@ -134,6 +134,7 @@ const Footer = () => {
                   height={18}
                   width={18}
                   alt="Facebook Icon"
+                  className="h-auto w-auto"
                 />
               </Link>
             </div>
@@ -148,7 +149,7 @@ const Footer = () => {
                     alt="Download on App Store"
                     width={20}
                     height={20}
-                    className="h-10"
+                    className="h-auto w-auto"
                   />
                 </Link>
                 <Link href="#">
@@ -157,7 +158,7 @@ const Footer = () => {
                     alt="Get it on Google Play"
                     width={20}
                     height={20}
-                    className="h-10"
+                    className="h-auto w-auto"
                   />
                 </Link>
               </div>
