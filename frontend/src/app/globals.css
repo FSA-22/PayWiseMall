@@ -372,7 +372,7 @@
 }
 
 @utility hero-rapper {
-  @apply relative w-full py-16 md:py-24 lg:py-6 bg-primary-5 min-h-screen overflow-hidden mt-16;
+  @apply relative w-full py-0 md:py-0 bg-primary-5 min-h-screen overflow-hidden mt-16;
 }
 
 @utility hero-1 {
