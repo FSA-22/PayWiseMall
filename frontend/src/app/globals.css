@@ -358,11 +358,11 @@
 }
 
 @utility sub-title-text {
-  @apply max-sm:text-xl sm:text-2xl;
+  @apply max-sm:text-xl sm:text-2xl font-semibold;
 }
 
 @utility desc-text {
-  @apply max-sm:text-sm sm:text-lg;
+  @apply text-xs sm:text-sm md:text-lg;
 }
 
 @utility header-style {

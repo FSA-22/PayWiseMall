@@ -18,7 +18,7 @@ export const UserActions = ({ onMenuClick }: MenuProps) => {
       {/* Mobile search icon */}
       <button
         onClick={() => setShowSearch((prev) => !prev)}
-        className="sm:hidden bg-gray-200 hover:cursor-pointer"
+        className="sm:hidden hover:cursor-pointer"
       >
         <Image
           src="/icons/searching.svg"
@@ -31,7 +31,7 @@ export const UserActions = ({ onMenuClick }: MenuProps) => {
 
       {/* Search Input (Mobile) */}
       {showSearch && (
-        <div className="absolute top-12 -right-6 w-screen sm:hidden max-w-sm z-50 animate-in fade-in zoom-in-95">
+        <div className="absolute top-16 -right-6 w-screen sm:hidden max-w-sm z-50 animate-in fade-in zoom-in-95">
           <div className=" w-full shadow-lg rounded-2xl  border">
             <SearchInput />
           </div>

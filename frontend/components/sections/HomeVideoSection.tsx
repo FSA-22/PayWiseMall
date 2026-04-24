@@ -5,18 +5,15 @@ import { Button } from '../ui/button';
 export const HomeVideoSection = () => {
   return (
     <section
-      className="w-full bg-white py-16 md:py-20"
+      className="w-full bg-white mt-6 sm:mt-12"
       aria-labelledby="home-video-heading"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
         {/* Use article for standalone meaningful block */}
         <article className="flex flex-col items-center text-center gap-8">
           {/* Title */}
           <header>
-            <h2
-              id="home-video-heading"
-              className="sub-title-text font-semibold"
-            >
+            <h2 id="home-video-heading" className="sub-title-text">
               Become a Vendor
             </h2>
           </header>
@@ -60,7 +57,7 @@ export const HomeVideoSection = () => {
 
           {/* CTA */}
           <Button
-            className="btn-primary w-fit desc-text"
+            className="btn-primary w-fit md:w-sm lg:w-fit desc-text"
             aria-label="Start Selling Today"
           >
             Start Selling Today
