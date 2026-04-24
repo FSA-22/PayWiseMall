@@ -19,7 +19,7 @@ export const MobileDrawer = ({ open, onClose }: MobileDrawerProps) => {
       {/* Overlay */}
       <div
         onClick={onClose}
-        className={`fixed inset-0 bg-black/40 z-40 transition  ${
+        className={`fixed inset-0 bg-black/40 z-50 transition  ${
           open ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       />
