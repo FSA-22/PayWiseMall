@@ -72,6 +72,7 @@ export const VendorCard = ({ vendor }: vendorCarProps) => {
               isFavorite ? '/icons/favorite-filled.webp' : '/icons/favorite.svg'
             }
             alt="Favorite Icon"
+            className="w-auto h-auto"
           />
         </button>
 
