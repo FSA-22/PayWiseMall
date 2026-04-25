@@ -452,13 +452,7 @@
 ========================= */
 
 @utility btn-tertiary {
-  @apply btn;
-
-  background-color: transparent;
-  color: var(--color-primary-1);
-
-  @apply hover:bg-(--color-white)
-         active:scale-[0.98];
+  @apply btn bg-primary-2 text-primary-5 hover:bg-primary-3 border border-primary-1 w-fit md:w-sm lg:w-fit;
 }
 
 @utility btn-sm {
