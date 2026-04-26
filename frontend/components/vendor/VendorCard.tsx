@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Star } from 'lucide-react';
+import { Heart, HeartIcon, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Vendor } from '@/constants';
 import {
@@ -50,7 +50,7 @@ export const VendorCard = ({ vendor }: vendorCarProps) => {
   };
 
   return (
-    <article aria-label={vendor.name} className="w-full">
+    <article aria-label={vendor.name} className="w-full py-1">
       <Card className="relative rounded-xl shadow-sm h-fit bg-gray-50">
         {/* Trending Badge */}
         {vendor.isTrending && (
@@ -65,14 +65,8 @@ export const VendorCard = ({ vendor }: vendorCarProps) => {
           onClick={handleFavoriteToggle}
           className="absolute top-3 right-3 hover:cursor-pointer"
         >
-          <Image
-            height={28}
-            width={28}
-            src={
-              isFavorite ? '/icons/favorite-filled.webp' : '/icons/favorite.svg'
-            }
-            alt="Favorite Icon"
-            className="w-auto h-auto"
+          <Heart
+            className={`w-6 h-6 fill-current transition-colors duration-200 ${isFavorite ? 'text-red-500' : 'text-gray-400'}`}
           />
         </button>
 
