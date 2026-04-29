@@ -52,15 +52,19 @@ export const BestSellers = () => {
         {/* LG → XL: GRID */}
         <div
           className="
-            hidden lg:grid
-            h-full
-            gap-6
-            grid-cols-3
-            xl:grid-cols-4
+hidden lg:flex
+    flex-wrap
+    justify-center
+    gap-6
           "
         >
           {vendors.map((vendor) => (
-            <VendorCard key={vendor.id} vendor={vendor} />
+            <div
+              key={vendor.id}
+              className="w-[calc(33.333%-1.5rem)] xl:w-[calc(25%-1.5rem)]"
+            >
+              <VendorCard key={vendor.id} vendor={vendor} />
+            </div>
           ))}
         </div>
         <div className="w-full flex-center">

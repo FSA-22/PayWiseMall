@@ -2,6 +2,7 @@ import { HomeHero } from '@/components/sections/HomeHero';
 import { HomeVideoSection } from '@/components/sections/HomeVideoSection';
 import HomeAboutUs from '@/components/sections/HomeAboutUs';
 import { BestSellers } from '@/components/vendor/BestSellers';
+import { TestimonialSection } from '@/components/sections/TestimonialSection';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <HomeVideoSection />
         <HomeAboutUs />
         <BestSellers />
+        <TestimonialSection />
       </div>
     </main>
   );
