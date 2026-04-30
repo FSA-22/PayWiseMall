@@ -77,7 +77,8 @@ const Faq = () => {
             })}
           </Accordion>
         </div>
-      </div>6
+      </div>
+    </section>
   );
 };
 
