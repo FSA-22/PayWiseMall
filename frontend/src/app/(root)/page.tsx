@@ -4,6 +4,7 @@ import HomeAboutUs from '@/components/sections/HomeAboutUs';
 import { BestSellers } from '@/components/vendor/BestSellers';
 import { TestimonialSection } from '@/components/sections/TestimonialSection';
 import DownloadApp from '@/components/sections/DownloadApp';
+import Faq from '@/components/sections/FAQ';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <BestSellers />
         <TestimonialSection />
         <DownloadApp />
+        <Faq />
       </div>
     </main>
   );
