@@ -3,6 +3,7 @@ import { HomeVideoSection } from '@/components/sections/HomeVideoSection';
 import HomeAboutUs from '@/components/sections/HomeAboutUs';
 import { BestSellers } from '@/components/vendor/BestSellers';
 import { TestimonialSection } from '@/components/sections/TestimonialSection';
+import DownloadApp from '@/components/sections/DownloadApp';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <HomeAboutUs />
         <BestSellers />
         <TestimonialSection />
+        <DownloadApp />
       </div>
     </main>
   );
