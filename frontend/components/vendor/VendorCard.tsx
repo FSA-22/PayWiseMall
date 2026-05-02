@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Heart, HeartIcon, Star } from 'lucide-react';
+import { Heart, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Vendor } from '@/constants';
 import {
   getAvailabilityColor,
   getAvailabilityTextColor,
 } from '@/lib/utils/vendor';
 import { Card, CardContent } from '../ui/card';
+import { Vendor } from '@/types/vendor';
 
 type vendorCarProps = {
   vendor: Vendor;

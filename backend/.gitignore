@@ -86,3 +86,6 @@ coverage
 # Optional: Turbo / Monorepo tools
 # =========================
 .turbo
+/src/generated/prisma
+
+/generated/prisma
